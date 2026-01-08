@@ -1,29 +1,37 @@
 # Idempotent-DotNet
 
-A .NET idempotency framework for safely handling retries across HTTP APIs and distributed systems.
-This repository contains the full source code for the **Idempotent** libraries, including core abstractions, persistence providers, and ASP.NET Core integration.
+Idempotent.Net is a modular .NET library for implementing **idempotent operations** in distributed systems.
+
+It provides a small, well-defined core and multiple storage providers so applications can safely handle retries, duplicate requests, and at-least-once delivery without introducing side effects.
 
 ---
 
-## Packages
+## 🧩 Packages
 
-| Package | Description |
-|------|-------------|
-| 📦 **Idempotent.Core** | Core idempotency model, workflows, and persistence abstractions |
-| 💾 **Idempotent.InMemory** | In-memory store (development & testing) |
-| 🗄 **Idempotent.Redis** | Redis-backed distributed store |
-| 🛢 **Idempotent.SqlServer** | SQL Server persistence |
-| ☁️ **Idempotent.DynamoDb** | DynamoDB persistence |
-| 🌐 **Idempotent.AspNetCore** | ASP.NET Core middleware and integration |
+Each of the below packages can be used independently where appropriate.
+
+#### Abstractions & Contracts
+
+- 📦 **Idempotent.Core**
+
+#### Stores
+
+- 💾 **Idempotent.InMemory**
+- 🗄 **Idempotent.Redis**
+- 🛢 **Idempotent.SqlServer**
+- ☁️ **Idempotent.DynamoDb**
+
+#### Integration
+
+- 🌐 **Idempotent.AspNetCore**
 
 ---
 
-## Documentation
+## 📘 Documentation
 
-📘 **Full documentation, guides, and API reference are available here:**
+It provides below for each package:
+- Brief Overview
+- Quick Start Guide
+- Complete API Reference (DocFX-generated)
 
-👉 [**Idempotent-DotNet**](https://idempotent-labs.github.io/idempotent-dotnet/index.html)
-
-The documentation includes:
-- Quick start setup
-- Complete API reference (DocFX-generated)
+To get started, click [**here**](https://idempotent-labs.github.io/idempotent-dotnet/index.html).
