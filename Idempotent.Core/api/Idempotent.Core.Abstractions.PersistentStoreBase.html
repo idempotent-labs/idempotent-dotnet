@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PersistentStoreBase | Idempotent </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PersistentStoreBase | Idempotent ">
+      
+      <meta name="description" content="Base class for persistent stores that may require initialization and schema validation.">
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/mansoorafzal/Idempotent.Net-Workspace/new/v1.0.0/apiSpec/new?filename=Idempotent_Core_Abstractions_PersistentStoreBase.md&amp;value=---%0Auid%3A%20Idempotent.Core.Abstractions.PersistentStoreBase%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+        </div>
+
+        <article data-uid="Idempotent.Core.Abstractions.PersistentStoreBase">
+
+
+
+  <h1 id="Idempotent_Core_Abstractions_PersistentStoreBase" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase" class="text-break">
+Class PersistentStoreBase  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/PersistentStoreBase.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Idempotent.html">Idempotent</a>.<a class="xref" href="Idempotent.Core.html">Core</a>.<a class="xref" href="Idempotent.Core.Abstractions.html">Abstractions</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Idempotent.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Base class for persistent stores that may require initialization and schema validation.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class PersistentStoreBase : CacheStoreBase, IStore</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Idempotent.Core.Abstractions.StoreBase.html">StoreBase</a></div>
+      <div><a class="xref" href="Idempotent.Core.Abstractions.CacheStoreBase.html">CacheStoreBase</a></div>
+      <div><span class="xref">PersistentStoreBase</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Idempotent.Core.Interfaces.IStore.html">IStore</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Idempotent.Core.Abstractions.NoSqlPersistentStoreBase.html">NoSqlPersistentStoreBase</a></div>
+      <div><a class="xref" href="Idempotent.Core.Abstractions.SqlPersistentStoreBase.html">SqlPersistentStoreBase</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Idempotent.Core.Abstractions.CacheStoreBase.html#Idempotent_Core_Abstractions_CacheStoreBase_HandleException_System_Exception_">CacheStoreBase.HandleException(Exception)</a>
+    </div>
+    <div>
+      <a class="xref" href="Idempotent.Core.Abstractions.CacheStoreBase.html#Idempotent_Core_Abstractions_CacheStoreBase_GetExpiry_System_Nullable_System_DateTime__System_DateTime_">CacheStoreBase.GetExpiry(DateTime?, DateTime)</a>
+    </div>
+    <div>
+      <a class="xref" href="Idempotent.Core.Abstractions.StoreBase.html#Idempotent_Core_Abstractions_StoreBase_InitiateAsync_System_String_Idempotent_Core_Contracts_Method_System_String_System_String_System_String_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_">StoreBase.InitiateAsync(string, Method, string, string, string, string, int?, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Idempotent.Core.Abstractions.StoreBase.html#Idempotent_Core_Abstractions_StoreBase_InitiateAsync_System_String_System_String_Idempotent_Core_Contracts_Method_System_String_System_String_System_String_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_">StoreBase.InitiateAsync(string, string, Method, string, string, string, string, int?, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Idempotent.Core.Abstractions.StoreBase.html#Idempotent_Core_Abstractions_StoreBase_CompleteAsync_System_String_Idempotent_Core_Contracts_Method_System_String_System_String_System_String_System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Int64__System_Nullable_System_Boolean__System_Nullable_System_Int64__System_Threading_CancellationToken_">StoreBase.CompleteAsync(string, Method, string, string, string, int?, string, string, long?, bool?, long?, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Idempotent.Core.Abstractions.StoreBase.html#Idempotent_Core_Abstractions_StoreBase_CompleteAsync_System_String_System_String_Idempotent_Core_Contracts_Method_System_String_System_String_System_String_System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Int64__System_Nullable_System_Boolean__System_Nullable_System_Int64__System_Threading_CancellationToken_">StoreBase.CompleteAsync(string, string, Method, string, string, string, int?, string, string, long?, bool?, long?, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Idempotent.Core.Abstractions.StoreBase.html#Idempotent_Core_Abstractions_StoreBase_TryGetAsync_System_String_System_Threading_CancellationToken_">StoreBase.TryGetAsync(string, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Idempotent.Core.Abstractions.StoreBase.html#Idempotent_Core_Abstractions_StoreBase_TryAddAsync_System_String_Idempotent_Core_Contracts_IdempotentTransaction_System_Threading_CancellationToken_">StoreBase.TryAddAsync(string, IdempotentTransaction, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Idempotent.Core.Abstractions.StoreBase.html#Idempotent_Core_Abstractions_StoreBase_TryUpdateAsync_System_String_Idempotent_Core_Contracts_IdempotentTransaction_System_Threading_CancellationToken_">StoreBase.TryUpdateAsync(string, IdempotentTransaction, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Idempotent.Core.Abstractions.StoreBase.html#Idempotent_Core_Abstractions_StoreBase_TryEvictAsync_System_Threading_CancellationToken_">StoreBase.TryEvictAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Idempotent.Core.Abstractions.StoreBase.html#Idempotent_Core_Abstractions_StoreBase_ValidateArgumentLength_System_String_System_String_">StoreBase.ValidateArgumentLength(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Idempotent_Core_Abstractions_PersistentStoreBase__ctor_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.#ctor*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_PersistentStoreBase__ctor_System_String_System_Boolean_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.#ctor(System.String,System.Boolean)">
+  PersistentStoreBase(string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/PersistentStoreBase.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Base class for persistent stores that may require initialization and schema validation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected PersistentStoreBase(string tableName, bool forceInitialize)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tableName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The table or collection name used by the persistent store.</p>
+</dd>
+    <dt><code>forceInitialize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When true, the store will attempt initialization during bootstrap.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Idempotent_Core_Abstractions_PersistentStoreBase__tableName" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase._tableName">
+  _tableName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/PersistentStoreBase.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly string _tableName</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Idempotent_Core_Abstractions_PersistentStoreBase_BuildHeader_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.BuildHeader*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_PersistentStoreBase_BuildHeader_System_Object_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.BuildHeader(System.Object)">
+  BuildHeader(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/PersistentStoreBase.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert persisted object to header representation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IdempotentHeader BuildHeader(object obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Persisted object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Idempotent.Core.Contracts.IdempotentHeader.html">IdempotentHeader</a></dt>
+    <dd><p>Header instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_PersistentStoreBase_BuildRequest_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.BuildRequest*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_PersistentStoreBase_BuildRequest_System_Object_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.BuildRequest(System.Object)">
+  BuildRequest(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/PersistentStoreBase.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert persisted object to request representation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IdempotentRequest BuildRequest(object obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Persisted object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Idempotent.Core.Contracts.IdempotentRequest.html">IdempotentRequest</a></dt>
+    <dd><p>Request instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_PersistentStoreBase_BuildResponse_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.BuildResponse*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_PersistentStoreBase_BuildResponse_System_Object_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.BuildResponse(System.Object)">
+  BuildResponse(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/PersistentStoreBase.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert persisted object to response representation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IdempotentResponse BuildResponse(object obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Persisted object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Idempotent.Core.Contracts.IdempotentResponse.html">IdempotentResponse</a></dt>
+    <dd><p>Response instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_PersistentStoreBase_BuildTransaction_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.BuildTransaction*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_PersistentStoreBase_BuildTransaction_System_Object_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.BuildTransaction(System.Object)">
+  BuildTransaction(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/PersistentStoreBase.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Builds an <a class="xref" href="Idempotent.Core.Contracts.IdempotentTransaction.html">IdempotentTransaction</a> from a CLR object representation stored in persistence.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IdempotentTransaction? BuildTransaction(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object representation to convert.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Idempotent.Core.Contracts.IdempotentTransaction.html">IdempotentTransaction</a></dt>
+    <dd><p>An instance of <a class="xref" href="Idempotent.Core.Contracts.IdempotentTransaction.html">IdempotentTransaction</a> or null when <code class="paramref">obj</code> is null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_PersistentStoreBase_DefineStorageAsync_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.DefineStorageAsync*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_PersistentStoreBase_DefineStorageAsync_System_Threading_CancellationToken_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.DefineStorageAsync(System.Threading.CancellationToken)">
+  DefineStorageAsync(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/PersistentStoreBase.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Defines the backing storage/schema.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Task DefineStorageAsync(CancellationToken token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_PersistentStoreBase_DoesStorageExistAsync_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.DoesStorageExistAsync*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_PersistentStoreBase_DoesStorageExistAsync_System_Threading_CancellationToken_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.DoesStorageExistAsync(System.Threading.CancellationToken)">
+  DoesStorageExistAsync(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/PersistentStoreBase.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the backing storage exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Task&lt;bool&gt; DoesStorageExistAsync(CancellationToken token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>True if storage exists; otherwise false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_PersistentStoreBase_GetMappedType_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.GetMappedType*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_PersistentStoreBase_GetMappedType__1_System_Type_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.GetMappedType``1(System.Type)">
+  GetMappedType&lt;T&gt;(Type?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/PersistentStoreBase.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the mapped provider representation for a CLR <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, if configured.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected T? GetMappedType&lt;T&gt;(Type? type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The CLR type to look up.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The mapped provider representation when present; otherwise the default value for <code class="typeparamref">T</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The expected provider representation type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_PersistentStoreBase_GetMappedType_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.GetMappedType*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_PersistentStoreBase_GetMappedType__1___0_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.GetMappedType``1(``0)">
+  GetMappedType&lt;T&gt;(T?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/PersistentStoreBase.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the CLR <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> that corresponds to a provider-specific representation, if configured.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Type? GetMappedType&lt;T&gt;(T? t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <span class="xref">T</span></dt>
+    <dd><p>The provider representation to look up.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The CLR <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> when a mapping exists; otherwise null.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The provider representation type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_PersistentStoreBase_MapTypes_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.MapTypes*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_PersistentStoreBase_MapTypes_System_Type_System_Object_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.MapTypes(System.Type,System.Object)">
+  MapTypes(Type, dynamic)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/PersistentStoreBase.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maps a CLR type to a provider-specific representation and the reverse mapping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void MapTypes(Type t, dynamic d)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The CLR <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> to map from.</p>
+</dd>
+    <dt><code>d</code> <span class="xref">dynamic</span></dt>
+    <dd><p>The provider-specific representation to map to.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_PersistentStoreBase_TryBootstrapAsync_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.TryBootstrapAsync*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_PersistentStoreBase_TryBootstrapAsync_System_Threading_CancellationToken_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.TryBootstrapAsync(System.Threading.CancellationToken)">
+  TryBootstrapAsync(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/PersistentStoreBase.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bootstrap for persistent stores which performs a health check and optionally initialization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override sealed Task TryBootstrapAsync(CancellationToken token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_PersistentStoreBase_TryHealthCheckAsync_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.TryHealthCheckAsync*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_PersistentStoreBase_TryHealthCheckAsync_System_Threading_CancellationToken_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.TryHealthCheckAsync(System.Threading.CancellationToken)">
+  TryHealthCheckAsync(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/PersistentStoreBase.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs a health check for the persistent store.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override abstract Task TryHealthCheckAsync(CancellationToken token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_PersistentStoreBase_TryInitAsync_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.TryInitAsync*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_PersistentStoreBase_TryInitAsync_System_Threading_CancellationToken_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.TryInitAsync(System.Threading.CancellationToken)">
+  TryInitAsync(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/PersistentStoreBase.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialize storage/schema if required. This method is sealed and will call into abstract storage-specific methods.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override sealed Task TryInitAsync(CancellationToken token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_PersistentStoreBase_ValidateStorageAsync_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.ValidateStorageAsync*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_PersistentStoreBase_ValidateStorageAsync_System_Threading_CancellationToken_" data-uid="Idempotent.Core.Abstractions.PersistentStoreBase.ValidateStorageAsync(System.Threading.CancellationToken)">
+  ValidateStorageAsync(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/PersistentStoreBase.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Validates the backing storage/schema.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Task ValidateStorageAsync(CancellationToken token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          idempotent-labs © 2026
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

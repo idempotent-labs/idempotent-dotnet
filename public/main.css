@@ -1,0 +1,338 @@
+/* ===========================
+   DocFX Modern — Technical Theme
+   Works with Auto/Light/Dark via data-bs-theme (Bootstrap 5)
+   =========================== */
+
+/* ---------- Font + layout baseline ---------- */
+:root {
+    --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", "Courier New", monospace;
+    --line: 1.65;
+    --radius: 10px;
+    --accent: #2563eb;
+    --accent-2: #7c3aed;
+    --bg: #ffffff;
+    --bg-2: #f6f8fb;
+    --text: #0f172a;
+    --muted: #475569;
+    --border: #e5e7eb;
+    --link: var(--accent);
+    --link-hover: #1d4ed8;
+    --code-bg: #f6f8fb;
+    --code-text: #0f172a;
+    --code-border: #e5e7eb;
+    --inline-code-bg: rgba(2, 6, 23, 0.06);
+    --inline-code-border: rgba(2, 6, 23, 0.10);
+    --callout-info-bg: rgba(37, 99, 235, 0.08);
+    --callout-warn-bg: rgba(245, 158, 11, 0.12);
+    --callout-danger-bg: rgba(239, 68, 68, 0.10);
+}
+
+/* Dark theme overrides */
+:root[data-bs-theme="dark"] {
+    --bg: #0b0f19;
+    --bg-2: #0f1628;
+    --text: #e5e7eb;
+    --muted: #a7b0c0;
+    --border: rgba(255, 255, 255, 0.10);
+    --link: #7ab0ff;
+    --link-hover: #a6c8ff;
+    --code-bg: #070a12;
+    --code-text: #e6eaf2;
+    --code-border: rgba(255, 255, 255, 0.10);
+    --inline-code-bg: rgba(255, 255, 255, 0.08);
+    --inline-code-border: rgba(255, 255, 255, 0.12);
+    --callout-info-bg: rgba(122, 176, 255, 0.12);
+    --callout-warn-bg: rgba(245, 158, 11, 0.16);
+    --callout-danger-bg: rgba(248, 113, 113, 0.14);
+}
+
+/* Auto mode support if data-bs-theme isn't set yet */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-bs-theme]) {
+        --bg: #0b0f19;
+        --bg-2: #0f1628;
+        --text: #e5e7eb;
+        --muted: #a7b0c0;
+        --border: rgba(255, 255, 255, 0.10);
+        --link: #7ab0ff;
+        --link-hover: #a6c8ff;
+        --code-bg: #070a12;
+        --code-text: #e6eaf2;
+        --inline-code-bg: rgba(255, 255, 255, 0.08);
+        --inline-code-border: rgba(255, 255, 255, 0.12);
+        --callout-info-bg: rgba(122, 176, 255, 0.12);
+        --callout-warn-bg: rgba(245, 158, 11, 0.16);
+        --callout-danger-bg: rgba(248, 113, 113, 0.14);
+    }
+}
+
+/* Ensure DocFX/Highlight.js uses our code colors */
+pre,
+pre code,
+.hljs,
+code.hljs,
+pre code.hljs {
+    background: var(--code-bg) !important;
+    color: var(--code-text) !important;
+}
+
+/* Actual code block */
+pre {
+    border: 1px solid var(--code-border);
+    border-radius: var(--radius);
+    padding: 0.85rem 1rem;
+    overflow-x: auto;
+    box-shadow: none;
+}
+
+/* Remove DocFX extra padding layers */
+pre code {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    white-space: pre;
+}
+
+/* Prevent token spans from painting their own backgrounds */
+.hljs * {
+    background: transparent !important;
+}
+
+/* ---------- Apply tokens to the page ---------- */
+html, body {
+    font-family: var(--font-sans);
+    line-height: var(--line);
+    background: var(--bg);
+    color: var(--text);
+}
+
+article, .content, .markdown {
+    max-width: 980px;
+}
+
+/* ---------- Headings ---------- */
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.015em;
+    color: var(--text);
+}
+
+h1 {
+    font-size: 2.0rem;
+    margin-top: 0.25rem;
+}
+
+h2 {
+    font-size: 1.55rem;
+    margin-top: 2.2rem;
+    padding-top: 0.25rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-top: 1.7rem;
+}
+
+h4 {
+    font-size: 1.1rem;
+    margin-top: 1.4rem;
+}
+
+h2 {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+/* ---------- Links ---------- */
+a {
+    color: var(--link);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+}
+
+    a:hover {
+        color: var(--link-hover);
+    }
+
+/* ---------- Paragraph + lists ---------- */
+p {
+    color: var(--text);
+}
+
+li {
+    margin: 0.25rem 0;
+}
+
+ul, ol {
+    padding-left: 1.25rem;
+}
+
+/* ---------- Inline code ---------- */
+code {
+    font-family: var(--font-mono);
+    font-size: 0.95em;
+}
+
+p code, li code, td code, a code {
+    background: var(--inline-code-bg);
+    border: 1px solid var(--inline-code-border);
+    padding: 0.12rem 0.35rem;
+    border-radius: 7px;
+}
+
+/* ---------- Tables ---------- */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--bg);
+}
+
+th, td {
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background: var(--bg-2);
+    color: var(--text);
+    font-weight: 600;
+}
+
+tr:last-child td {
+    border-bottom: 0;
+}
+
+/* ---------- Blockquotes / callouts ---------- */
+blockquote {
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    border-left: 4px solid var(--accent);
+    background: var(--bg-2);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    color: var(--muted);
+}
+
+.alert, .NOTE, .TIP, .WARNING, .CAUTION {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    padding: 0.85rem 1rem;
+}
+
+.alert-info {
+    background: var(--callout-info-bg);
+}
+
+.alert-warning {
+    background: var(--callout-warn-bg);
+}
+
+.alert-danger {
+    background: var(--callout-danger-bg);
+}
+
+/* ---------- TOC / sidebar ---------- */
+.toc, .sidetoc, .toc-nav {
+    font-size: 0.95rem;
+}
+
+.toc a, .sidetoc a {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.toc a:hover, .sidetoc a:hover {
+    color: var(--text);
+}
+
+/* ---------- Inputs ---------- */
+input, textarea, select {
+    border-radius: 9px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ---------- Focus ---------- */
+:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.35);
+    outline-offset: 2px;
+    border-radius: 8px;
+}
+
+/* ---------- Small polish ---------- */
+hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 2rem 0;
+}
+
+img {
+    max-width: 100%;
+    border-radius: var(--radius);
+}
+
+a.header-anchor, .header-anchor {
+    opacity: 0.55;
+}
+
+a.header-anchor:hover, .header-anchor:hover {
+    opacity: 0.95;
+}
+
+/* ---------- Navbar: hide nav links, keep theme toggle ---------- */
+
+/* Hide brand and nav links */
+.navbar .navbar-brand,
+.navbar .navbar-nav,
+.navbar .navbar-text {
+    display: none !important;
+}
+
+/* KEEP the collapse container because the theme switcher lives in it */
+.navbar .navbar-collapse {
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+
+/* Make sure the theme switcher is visible */
+.navbar [data-bs-theme-value],
+.navbar .theme-switcher,
+.navbar .dropdown-toggle {
+    display: inline-flex !important;
+    visibility: visible !important;
+}
+
+/* Make navbar visually minimal */
+.navbar {
+    background: transparent !important;
+    border-bottom: 0 !important;
+    padding: 0.25rem 0.5rem !important;
+    min-height: 0 !important;
+}
+
+/* ---------- Footer ---------- */
+footer, .footer {
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+}
+
+/* ---------- Hide all "View source" (</>) icons/links ---------- */
+.bi-code-slash,
+i.bi.bi-code-slash,
+svg.bi.bi-code-slash {
+    display: none !important;
+}
+
+a[title*="source" i],
+a[aria-label*="source" i],
+a[title*="view source" i],
+a[aria-label*="view source" i] {
+    display: none !important;
+}
+/* ===========================
+   End of DocFX Modern Theme
+   =========================== */

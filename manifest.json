@@ -1,0 +1,1000 @@
+{
+  "source_base_path": "/home/runner/work/Idempotent.Net-Workspace/Idempotent.Net-Workspace/.config",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.AspNetCore/api/Idempotent.AspNetCore.Attributes.IdempotentAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.AspNetCore/api/Idempotent.AspNetCore.Attributes.IdempotentAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.AspNetCore.Attributes.IdempotentAttribute",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.AspNetCore/api/Idempotent.AspNetCore.Attributes.IdempotentAttribute.yml\" sourcestartlinenumber=\"1\">Indicates that an endpoint supports idempotent behavior and provides metadata required by the middleware.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.AspNetCore/api/Idempotent.AspNetCore.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.AspNetCore/api/Idempotent.AspNetCore.Attributes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.AspNetCore.Attributes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.AspNetCore/api/Idempotent.AspNetCore.Extensions.ApplicationBuilderExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.AspNetCore/api/Idempotent.AspNetCore.Extensions.ApplicationBuilderExtension.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.AspNetCore.Extensions.ApplicationBuilderExtension",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.AspNetCore/api/Idempotent.AspNetCore.Extensions.ApplicationBuilderExtension.yml\" sourcestartlinenumber=\"1\">Extension methods for registering idempotent middleware into the application pipeline.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.AspNetCore/api/Idempotent.AspNetCore.Extensions.ServiceCollectionExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.AspNetCore/api/Idempotent.AspNetCore.Extensions.ServiceCollectionExtension.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.AspNetCore.Extensions.ServiceCollectionExtension",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.AspNetCore/api/Idempotent.AspNetCore.Extensions.ServiceCollectionExtension.yml\" sourcestartlinenumber=\"1\">Extension methods for registering idempotent services into an <xref href=\"Microsoft.Extensions.DependencyInjection.IServiceCollection\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.AspNetCore/api/Idempotent.AspNetCore.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.AspNetCore/api/Idempotent.AspNetCore.Extensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.AspNetCore.Extensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.AspNetCore/api/Idempotent.AspNetCore.Interfaces.IIdempotentService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.AspNetCore/api/Idempotent.AspNetCore.Interfaces.IIdempotentService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.AspNetCore.Interfaces.IIdempotentService",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.AspNetCore/api/Idempotent.AspNetCore.Interfaces.IIdempotentService.yml\" sourcestartlinenumber=\"1\">Defines the idempotent service used by middleware to initiate and complete idempotent transactions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.AspNetCore/api/Idempotent.AspNetCore.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.AspNetCore/api/Idempotent.AspNetCore.Interfaces.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.AspNetCore.Interfaces",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.AspNetCore/api/Idempotent.AspNetCore.Middlewares.IdempotentMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.AspNetCore/api/Idempotent.AspNetCore.Middlewares.IdempotentMiddleware.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.AspNetCore.Middlewares.IdempotentMiddleware",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.AspNetCore/api/Idempotent.AspNetCore.Middlewares.IdempotentMiddleware.yml\" sourcestartlinenumber=\"1\">Middleware responsible for enforcing idempotent request handling.\nIt integrates with an <xref href=\"Idempotent.AspNetCore.Interfaces.IIdempotentService\" data-throw-if-not-resolved=\"false\"></xref> to initiate and complete idempotent transactions\nand will replay completed responses when appropriate.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.AspNetCore/api/Idempotent.AspNetCore.Middlewares.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.AspNetCore/api/Idempotent.AspNetCore.Middlewares.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.AspNetCore.Middlewares",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.AspNetCore/api/Idempotent.AspNetCore.Services.HttpService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.AspNetCore/api/Idempotent.AspNetCore.Services.HttpService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.AspNetCore.Services.HttpService",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.AspNetCore/api/Idempotent.AspNetCore.Services.HttpService.yml\" sourcestartlinenumber=\"1\">HTTP-facing implementation of <xref href=\"Idempotent.AspNetCore.Interfaces.IIdempotentService\" data-throw-if-not-resolved=\"false\"></xref> that integrates with middleware and a backing <xref href=\"Idempotent.Core.Interfaces.IStore\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.AspNetCore/api/Idempotent.AspNetCore.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.AspNetCore/api/Idempotent.AspNetCore.Services.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.AspNetCore.Services",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../.doc/Idempotent.AspNetCore/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.AspNetCore/api/toc.html"
+        },
+        ".json": {
+          "relative_path": "Idempotent.AspNetCore/api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../.doc/Idempotent.AspNetCore/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.AspNetCore/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../.doc/Idempotent.AspNetCore/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.AspNetCore/toc.html"
+        },
+        ".json": {
+          "relative_path": "Idempotent.AspNetCore/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Abstractions.CacheStoreBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Abstractions.CacheStoreBase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Abstractions.CacheStoreBase",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Core/api/Idempotent.Core.Abstractions.CacheStoreBase.yml\" sourcestartlinenumber=\"1\">Base class for in-memory/cache-backed stores.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Abstractions.NoSqlPersistentStoreBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Abstractions.NoSqlPersistentStoreBase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Abstractions.NoSqlPersistentStoreBase",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Core/api/Idempotent.Core.Abstractions.NoSqlPersistentStoreBase.yml\" sourcestartlinenumber=\"1\">Base class for NoSQL-backed persistent stores providing expected attribute metadata and validation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Abstractions.PersistentStoreBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Abstractions.PersistentStoreBase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Abstractions.PersistentStoreBase",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Core/api/Idempotent.Core.Abstractions.PersistentStoreBase.yml\" sourcestartlinenumber=\"1\">Base class for persistent stores that may require initialization and schema validation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Abstractions.SqlPersistentStoreBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Abstractions.SqlPersistentStoreBase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Abstractions.SqlPersistentStoreBase",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Core/api/Idempotent.Core.Abstractions.SqlPersistentStoreBase.yml\" sourcestartlinenumber=\"1\">Base class for SQL-backed persistent stores providing schema expectations and validation helpers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Abstractions.StoreBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Abstractions.StoreBase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Abstractions.StoreBase",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Core/api/Idempotent.Core.Abstractions.StoreBase.yml\" sourcestartlinenumber=\"1\">Base implementation that contains the shared workflow and concurrency primitives used by concrete store implementations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Abstractions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Abstractions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Abstractions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.IdempotentDecision.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Contracts.IdempotentDecision.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Contracts.IdempotentDecision",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.IdempotentDecision.yml\" sourcestartlinenumber=\"1\">Represents the result of initiating or completing an idempotent operation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.IdempotentDiagnostic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Contracts.IdempotentDiagnostic.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Contracts.IdempotentDiagnostic",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.IdempotentDiagnostic.yml\" sourcestartlinenumber=\"1\">Diagnostic information published for idempotent operations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.IdempotentHeader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Contracts.IdempotentHeader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Contracts.IdempotentHeader",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.IdempotentHeader.yml\" sourcestartlinenumber=\"1\">Represents metadata for an idempotent transaction.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.IdempotentRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Contracts.IdempotentRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Contracts.IdempotentRequest",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.IdempotentRequest.yml\" sourcestartlinenumber=\"1\">Represents a request payload used for idempotent operations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.IdempotentResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Contracts.IdempotentResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Contracts.IdempotentResponse",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.IdempotentResponse.yml\" sourcestartlinenumber=\"1\">Represents a response that was previously recorded for an idempotent transaction.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.IdempotentTransaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Contracts.IdempotentTransaction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Contracts.IdempotentTransaction",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.IdempotentTransaction.yml\" sourcestartlinenumber=\"1\">Represents a full idempotent transaction containing header, request and optional response.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.Infrastructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Contracts.Infrastructure.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Contracts.Infrastructure",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.Infrastructure.yml\" sourcestartlinenumber=\"1\">Infrastructure-level error codes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.Method.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Contracts.Method.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Contracts.Method",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.Method.yml\" sourcestartlinenumber=\"1\">Supported HTTP-like methods for idempotent operations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.Result.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Contracts.Result.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Contracts.Result",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.Result.yml\" sourcestartlinenumber=\"1\">Result codes returned by idempotent operations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.State.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Contracts.State.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Contracts.State",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.State.yml\" sourcestartlinenumber=\"1\">State of an idempotent transaction.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Contracts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Contracts.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Contracts",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Events.IdempotentEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Events.IdempotentEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Events.IdempotentEvent",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Core/api/Idempotent.Core.Events.IdempotentEvent.yml\" sourcestartlinenumber=\"1\">Lightweight pub/sub event hub for idempotent diagnostics.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Events.Subscription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Events.Subscription.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Events.Subscription",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Core/api/Idempotent.Core.Events.Subscription.yml\" sourcestartlinenumber=\"1\">Represents a subscription returned by <xref href=\"Idempotent.Core.Events.IdempotentEvent.Subscribe(System.Diagnostics.TraceEventType%2cSystem.Action%7bIdempotent.Core.Contracts.IdempotentDiagnostic%7d)\" data-throw-if-not-resolved=\"false\"></xref>.\nDisposing this instance will unregister the subscriber from the event hub.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Events.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Events.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Events",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Exceptions.StoreException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Exceptions.StoreException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Exceptions.StoreException",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Core/api/Idempotent.Core.Exceptions.StoreException.yml\" sourcestartlinenumber=\"1\">Exception type used to represent errors from storage providers with infrastructure error codes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Exceptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Exceptions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Extensions.EnumExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Extensions.EnumExtension.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Extensions.EnumExtension",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Core/api/Idempotent.Core.Extensions.EnumExtension.yml\" sourcestartlinenumber=\"1\">Helper methods for working with enums including caching of descriptions and names.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Extensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Extensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Interfaces.IStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Interfaces.IStore.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Interfaces.IStore",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Core/api/Idempotent.Core.Interfaces.IStore.yml\" sourcestartlinenumber=\"1\">Defines the contract for an idempotent store capable of initiating and completing transactions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Core/api/Idempotent.Core.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/Idempotent.Core.Interfaces.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Core.Interfaces",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../.doc/Idempotent.Core/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/api/toc.html"
+        },
+        ".json": {
+          "relative_path": "Idempotent.Core/api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../.doc/Idempotent.Core/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../.doc/Idempotent.Core/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Core/toc.html"
+        },
+        ".json": {
+          "relative_path": "Idempotent.Core/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.DynamoDb/api/Idempotent.DynamoDb.DynamoDbStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.DynamoDb/api/Idempotent.DynamoDb.DynamoDbStore.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.DynamoDb.DynamoDbStore",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.DynamoDb/api/Idempotent.DynamoDb.DynamoDbStore.yml\" sourcestartlinenumber=\"1\">DynamoDB-backed implementation of <xref href=\"Idempotent.Core.Abstractions.NoSqlPersistentStoreBase\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.DynamoDb/api/Idempotent.DynamoDb.Extensions.ServiceCollectionExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.DynamoDb/api/Idempotent.DynamoDb.Extensions.ServiceCollectionExtension.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.DynamoDb.Extensions.ServiceCollectionExtension",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.DynamoDb/api/Idempotent.DynamoDb.Extensions.ServiceCollectionExtension.yml\" sourcestartlinenumber=\"1\">Extension methods to register a DynamoDB-backed idempotent store into an <xref href=\"Microsoft.Extensions.DependencyInjection.IServiceCollection\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.DynamoDb/api/Idempotent.DynamoDb.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.DynamoDb/api/Idempotent.DynamoDb.Extensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.DynamoDb.Extensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.DynamoDb/api/Idempotent.DynamoDb.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.DynamoDb/api/Idempotent.DynamoDb.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.DynamoDb",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../.doc/Idempotent.DynamoDb/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.DynamoDb/api/toc.html"
+        },
+        ".json": {
+          "relative_path": "Idempotent.DynamoDb/api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../.doc/Idempotent.DynamoDb/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.DynamoDb/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../.doc/Idempotent.DynamoDb/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.DynamoDb/toc.html"
+        },
+        ".json": {
+          "relative_path": "Idempotent.DynamoDb/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.InMemory/api/Idempotent.InMemory.Extensions.ServiceCollectionExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.InMemory/api/Idempotent.InMemory.Extensions.ServiceCollectionExtension.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.InMemory.Extensions.ServiceCollectionExtension",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.InMemory/api/Idempotent.InMemory.Extensions.ServiceCollectionExtension.yml\" sourcestartlinenumber=\"1\">Service registration helpers for the in-memory idempotent store used in tests and lightweight scenarios.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.InMemory/api/Idempotent.InMemory.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.InMemory/api/Idempotent.InMemory.Extensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.InMemory.Extensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.InMemory/api/Idempotent.InMemory.InMemoryStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.InMemory/api/Idempotent.InMemory.InMemoryStore.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.InMemory.InMemoryStore",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.InMemory/api/Idempotent.InMemory.InMemoryStore.yml\" sourcestartlinenumber=\"1\">In-memory implementation of the idempotent store used for testing and lightweight scenarios.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.InMemory/api/Idempotent.InMemory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.InMemory/api/Idempotent.InMemory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.InMemory",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../.doc/Idempotent.InMemory/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.InMemory/api/toc.html"
+        },
+        ".json": {
+          "relative_path": "Idempotent.InMemory/api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../.doc/Idempotent.InMemory/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.InMemory/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../.doc/Idempotent.InMemory/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.InMemory/toc.html"
+        },
+        ".json": {
+          "relative_path": "Idempotent.InMemory/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Redis/api/Idempotent.Redis.Extensions.ServiceCollectionExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Redis/api/Idempotent.Redis.Extensions.ServiceCollectionExtension.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Redis.Extensions.ServiceCollectionExtension",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Redis/api/Idempotent.Redis.Extensions.ServiceCollectionExtension.yml\" sourcestartlinenumber=\"1\">Service registration helpers for the Redis-backed idempotent store.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Redis/api/Idempotent.Redis.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Redis/api/Idempotent.Redis.Extensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Redis.Extensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Redis/api/Idempotent.Redis.RedisStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Redis/api/Idempotent.Redis.RedisStore.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Redis.RedisStore",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.Redis/api/Idempotent.Redis.RedisStore.yml\" sourcestartlinenumber=\"1\">Redis-backed implementation of <xref href=\"Idempotent.Core.Abstractions.CacheStoreBase\" data-throw-if-not-resolved=\"false\"></xref> using StackExchange.Redis.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.Redis/api/Idempotent.Redis.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Redis/api/Idempotent.Redis.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.Redis",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../.doc/Idempotent.Redis/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Redis/api/toc.html"
+        },
+        ".json": {
+          "relative_path": "Idempotent.Redis/api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../.doc/Idempotent.Redis/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Redis/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../.doc/Idempotent.Redis/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.Redis/toc.html"
+        },
+        ".json": {
+          "relative_path": "Idempotent.Redis/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.SqlServer/api/Idempotent.SqlServer.Extensions.ServiceCollectionExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.SqlServer/api/Idempotent.SqlServer.Extensions.ServiceCollectionExtension.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.SqlServer.Extensions.ServiceCollectionExtension",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.SqlServer/api/Idempotent.SqlServer.Extensions.ServiceCollectionExtension.yml\" sourcestartlinenumber=\"1\">Extension helpers to register a SQL Server backed idempotent store into an <xref href=\"Microsoft.Extensions.DependencyInjection.IServiceCollection\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.SqlServer/api/Idempotent.SqlServer.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.SqlServer/api/Idempotent.SqlServer.Extensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.SqlServer.Extensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.SqlServer/api/Idempotent.SqlServer.SqlServerStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.SqlServer/api/Idempotent.SqlServer.SqlServerStore.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.SqlServer.SqlServerStore",
+      "Summary": "<p sourcefile=\"../.doc/Idempotent.SqlServer/api/Idempotent.SqlServer.SqlServerStore.yml\" sourcestartlinenumber=\"1\">SQL Server backed implementation of <xref href=\"Idempotent.Core.Abstractions.SqlPersistentStoreBase\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../.doc/Idempotent.SqlServer/api/Idempotent.SqlServer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.SqlServer/api/Idempotent.SqlServer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Idempotent.SqlServer",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../.doc/Idempotent.SqlServer/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.SqlServer/api/toc.html"
+        },
+        ".json": {
+          "relative_path": "Idempotent.SqlServer/api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../.doc/Idempotent.SqlServer/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.SqlServer/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../.doc/Idempotent.SqlServer/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Idempotent.SqlServer/toc.html"
+        },
+        ".json": {
+          "relative_path": "Idempotent.SqlServer/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../.doc/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../.doc/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

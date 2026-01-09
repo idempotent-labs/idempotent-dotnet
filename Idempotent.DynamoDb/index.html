@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>☁️ Idempotent.DynamoDb | Idempotent </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="☁️ Idempotent.DynamoDb | Idempotent ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+        </div>
+
+        <article data-uid="">
+<h1 id="-idempotentdynamodb">☁️ Idempotent.DynamoDb</h1>
+
+<p><code>Idempotent.DynamoDb</code> provides an idempotent store implementation backed by Amazon DynamoDB.
+It is designed for cloud-native, horizontally scalable systems where low-latency access and managed durability are required.</p>
+<p>This store prioritizes scalability and availability. For strict relational guarantees or cross-transaction querying, a <code>SQL-based</code> store may be more appropriate.</p>
+<hr>
+<h2 id="-characteristics">🧬 Characteristics</h2>
+<ul>
+<li>Fully managed NoSQL persistence</li>
+<li>Horizontal scalability</li>
+<li>Native TTL-based expiration</li>
+<li>High availability without infrastructure management</li>
+<li>Relies on DynamoDB’s conditional writes for correctness</li>
+<li>Does not require distributed locks</li>
+<li>Designed to tolerate eventual consistency where safe</li>
+</ul>
+<hr>
+<h2 id="-use-cases">🎯 Use Cases</h2>
+<ul>
+<li>Serverless APIs (AWS Lambda)</li>
+<li>Cloud-native microservices</li>
+<li>Systems requiring high availability with minimal ops overhead</li>
+</ul>
+<hr>
+<h2 id="-quickstart">🚀 Quickstart</h2>
+<h4 id="install-package">Install Package</h4>
+<pre><code class="lang-bash">dotnet add package Idempotent.DynamoDb
+</code></pre>
+<h4 id="register-store">Register Store</h4>
+<pre><code class="lang-csharp">builder.Services.AddDynamoDbStore(
+    storeKey: &quot;default&quot;,
+    serviceUrl: &quot;http://localhost:8000&quot;,
+    region: &quot;us-east-1&quot;,        // Optional, default value is us-east-1
+    tableName: &quot;Transaction&quot;,   // Optional, default value is Transaction
+    forceInitialize: true       // Optional, default value is true
+);
+</code></pre>
+<hr>
+<h2 id="-technical-reference">📘 Technical Reference</h2>
+<p>See the API Reference for full technical documentation.</p>
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          idempotent-labs © 2026
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

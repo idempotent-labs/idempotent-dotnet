@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class StoreBase | Idempotent </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class StoreBase | Idempotent ">
+      
+      <meta name="description" content="Base implementation that contains the shared workflow and concurrency primitives used by concrete store implementations.">
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/mansoorafzal/Idempotent.Net-Workspace/new/v1.0.0/apiSpec/new?filename=Idempotent_Core_Abstractions_StoreBase.md&amp;value=---%0Auid%3A%20Idempotent.Core.Abstractions.StoreBase%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+        </div>
+
+        <article data-uid="Idempotent.Core.Abstractions.StoreBase">
+
+
+
+  <h1 id="Idempotent_Core_Abstractions_StoreBase" data-uid="Idempotent.Core.Abstractions.StoreBase" class="text-break">
+Class StoreBase  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/StoreBase.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Idempotent.html">Idempotent</a>.<a class="xref" href="Idempotent.Core.html">Core</a>.<a class="xref" href="Idempotent.Core.Abstractions.html">Abstractions</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Idempotent.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Base implementation that contains the shared workflow and concurrency primitives used by concrete store implementations.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class StoreBase : IStore</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">StoreBase</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Idempotent.Core.Interfaces.IStore.html">IStore</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Idempotent.Core.Abstractions.CacheStoreBase.html">CacheStoreBase</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Idempotent_Core_Abstractions_StoreBase_CompleteAsync_" data-uid="Idempotent.Core.Abstractions.StoreBase.CompleteAsync*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_StoreBase_CompleteAsync_System_String_Idempotent_Core_Contracts_Method_System_String_System_String_System_String_System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Int64__System_Nullable_System_Boolean__System_Nullable_System_Int64__System_Threading_CancellationToken_" data-uid="Idempotent.Core.Abstractions.StoreBase.CompleteAsync(System.String,Idempotent.Core.Contracts.Method,System.String,System.String,System.String,System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Int64},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+  CompleteAsync(string, Method, string, string, string, int?, string?, string?, long?, bool?, long?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/StoreBase.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Completes an idempotent transaction using a generated correlation id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IdempotentDecision&gt; CompleteAsync(string service, Method method, string path, string querystring, string key, int? statusCode, string? header, string? body, long? originalBodyBytes, bool? isBodyTruncated, long? extraBodyBytes, CancellationToken token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Service name for the operation.</p>
+</dd>
+    <dt><code>method</code> <a class="xref" href="Idempotent.Core.Contracts.Method.html">Method</a></dt>
+    <dd><p>Method used in the operation.</p>
+</dd>
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Request path for the operation.</p>
+</dd>
+    <dt><code>querystring</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional request querystring.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>User-provided idempotent key.</p>
+</dd>
+    <dt><code>statusCode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>Optional HTTP status code to record.</p>
+</dd>
+    <dt><code>header</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional serialized response header to record.</p>
+</dd>
+    <dt><code>body</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional serialized response body to record.</p>
+</dd>
+    <dt><code>originalBodyBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd><p>Optional size of the original body in bytes.</p>
+</dd>
+    <dt><code>isBodyTruncated</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>Optional flag indicating whether the body was truncated.</p>
+</dd>
+    <dt><code>extraBodyBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd><p>Optional number of bytes truncated from the body.</p>
+</dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Idempotent.Core.Contracts.IdempotentDecision.html">IdempotentDecision</a>&gt;</dt>
+    <dd><p>An <a class="xref" href="Idempotent.Core.Contracts.IdempotentDecision.html">IdempotentDecision</a> describing the result of the completion.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_StoreBase_CompleteAsync_" data-uid="Idempotent.Core.Abstractions.StoreBase.CompleteAsync*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_StoreBase_CompleteAsync_System_String_System_String_Idempotent_Core_Contracts_Method_System_String_System_String_System_String_System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Int64__System_Nullable_System_Boolean__System_Nullable_System_Int64__System_Threading_CancellationToken_" data-uid="Idempotent.Core.Abstractions.StoreBase.CompleteAsync(System.String,System.String,Idempotent.Core.Contracts.Method,System.String,System.String,System.String,System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Int64},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+  CompleteAsync(string, string, Method, string, string, string, int?, string?, string?, long?, bool?, long?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/StoreBase.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Completes an idempotent transaction using the provided correlation id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IdempotentDecision&gt; CompleteAsync(string correlationId, string service, Method method, string path, string querystring, string key, int? statusCode, string? header, string? body, long? originalBodyBytes, bool? isBodyTruncated, long? extraBodyBytes, CancellationToken token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>correlationId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Correlation id to associate with this operation.</p>
+</dd>
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Service name for the operation.</p>
+</dd>
+    <dt><code>method</code> <a class="xref" href="Idempotent.Core.Contracts.Method.html">Method</a></dt>
+    <dd><p>Method used in the operation.</p>
+</dd>
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Request path for the operation.</p>
+</dd>
+    <dt><code>querystring</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional request querystring.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>User-provided idempotent key.</p>
+</dd>
+    <dt><code>statusCode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>Optional HTTP status code to record.</p>
+</dd>
+    <dt><code>header</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional serialized response header to record.</p>
+</dd>
+    <dt><code>body</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional serialized response body to record.</p>
+</dd>
+    <dt><code>originalBodyBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd><p>Optional size of the original body in bytes.</p>
+</dd>
+    <dt><code>isBodyTruncated</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>Optional flag indicating whether the body was truncated.</p>
+</dd>
+    <dt><code>extraBodyBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd><p>Optional number of bytes truncated from the body.</p>
+</dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Idempotent.Core.Contracts.IdempotentDecision.html">IdempotentDecision</a>&gt;</dt>
+    <dd><p>An <a class="xref" href="Idempotent.Core.Contracts.IdempotentDecision.html">IdempotentDecision</a> describing the result of the completion.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_StoreBase_InitiateAsync_" data-uid="Idempotent.Core.Abstractions.StoreBase.InitiateAsync*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_StoreBase_InitiateAsync_System_String_Idempotent_Core_Contracts_Method_System_String_System_String_System_String_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="Idempotent.Core.Abstractions.StoreBase.InitiateAsync(System.String,Idempotent.Core.Contracts.Method,System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">
+  InitiateAsync(string, Method, string, string, string, string, int?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/StoreBase.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initiates an idempotent transaction using a generated correlation id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IdempotentDecision&gt; InitiateAsync(string service, Method method, string path, string querystring, string key, string fingerprint, int? timeToLiveMilliseconds, CancellationToken token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Service name for the operation.</p>
+</dd>
+    <dt><code>method</code> <a class="xref" href="Idempotent.Core.Contracts.Method.html">Method</a></dt>
+    <dd><p>Method used in the operation.</p>
+</dd>
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Request path for the operation.</p>
+</dd>
+    <dt><code>querystring</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional request querystring.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>User-provided idempotent key.</p>
+</dd>
+    <dt><code>fingerprint</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Fingerprint of the request payload.</p>
+</dd>
+    <dt><code>timeToLiveMilliseconds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>Optional time-to-live in milliseconds for the transaction.</p>
+</dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Idempotent.Core.Contracts.IdempotentDecision.html">IdempotentDecision</a>&gt;</dt>
+    <dd><p>An <a class="xref" href="Idempotent.Core.Contracts.IdempotentDecision.html">IdempotentDecision</a> describing the result of the initiation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_StoreBase_InitiateAsync_" data-uid="Idempotent.Core.Abstractions.StoreBase.InitiateAsync*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_StoreBase_InitiateAsync_System_String_System_String_Idempotent_Core_Contracts_Method_System_String_System_String_System_String_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="Idempotent.Core.Abstractions.StoreBase.InitiateAsync(System.String,System.String,Idempotent.Core.Contracts.Method,System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">
+  InitiateAsync(string, string, Method, string, string, string, string, int?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/StoreBase.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initiates an idempotent transaction using the provided correlation id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IdempotentDecision&gt; InitiateAsync(string correlationId, string service, Method method, string path, string querystring, string key, string fingerprint, int? timeToLiveMilliseconds, CancellationToken token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>correlationId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Correlation id to associate with this operation.</p>
+</dd>
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Service name for the operation.</p>
+</dd>
+    <dt><code>method</code> <a class="xref" href="Idempotent.Core.Contracts.Method.html">Method</a></dt>
+    <dd><p>Method used in the operation.</p>
+</dd>
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Request path for the operation.</p>
+</dd>
+    <dt><code>querystring</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional request querystring.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>User-provided idempotent key.</p>
+</dd>
+    <dt><code>fingerprint</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Fingerprint of the request payload.</p>
+</dd>
+    <dt><code>timeToLiveMilliseconds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>Optional time-to-live in milliseconds for the transaction.</p>
+</dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Idempotent.Core.Contracts.IdempotentDecision.html">IdempotentDecision</a>&gt;</dt>
+    <dd><p>An <a class="xref" href="Idempotent.Core.Contracts.IdempotentDecision.html">IdempotentDecision</a> describing the result of the initiation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_StoreBase_TryAddAsync_" data-uid="Idempotent.Core.Abstractions.StoreBase.TryAddAsync*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_StoreBase_TryAddAsync_System_String_Idempotent_Core_Contracts_IdempotentTransaction_System_Threading_CancellationToken_" data-uid="Idempotent.Core.Abstractions.StoreBase.TryAddAsync(System.String,Idempotent.Core.Contracts.IdempotentTransaction,System.Threading.CancellationToken)">
+  TryAddAsync(string, IdempotentTransaction, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/StoreBase.cs/#L352"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Store-specific add operation. Implemented by concrete stores.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Task&lt;bool&gt; TryAddAsync(string composite, IdempotentTransaction transaction, CancellationToken token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>composite</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Composite key to store under.</p>
+</dd>
+    <dt><code>transaction</code> <a class="xref" href="Idempotent.Core.Contracts.IdempotentTransaction.html">IdempotentTransaction</a></dt>
+    <dd><p>Transaction to persist.</p>
+</dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>True when the add succeeded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_StoreBase_TryBootstrapAsync_" data-uid="Idempotent.Core.Abstractions.StoreBase.TryBootstrapAsync*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_StoreBase_TryBootstrapAsync_System_Threading_CancellationToken_" data-uid="Idempotent.Core.Abstractions.StoreBase.TryBootstrapAsync(System.Threading.CancellationToken)">
+  TryBootstrapAsync(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/StoreBase.cs/#L367"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional bootstrap hook that concrete stores may override to perform initialization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Task TryBootstrapAsync(CancellationToken token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_StoreBase_TryEvictAsync_" data-uid="Idempotent.Core.Abstractions.StoreBase.TryEvictAsync*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_StoreBase_TryEvictAsync_System_Threading_CancellationToken_" data-uid="Idempotent.Core.Abstractions.StoreBase.TryEvictAsync(System.Threading.CancellationToken)">
+  TryEvictAsync(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/StoreBase.cs/#L394"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional eviction hook that concrete stores may override to perform provider-specific eviction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Task TryEvictAsync(CancellationToken token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_StoreBase_TryGetAsync_" data-uid="Idempotent.Core.Abstractions.StoreBase.TryGetAsync*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_StoreBase_TryGetAsync_System_String_System_Threading_CancellationToken_" data-uid="Idempotent.Core.Abstractions.StoreBase.TryGetAsync(System.String,System.Threading.CancellationToken)">
+  TryGetAsync(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/StoreBase.cs/#L343"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Store-specific retrieval of a transaction by composite key.
+Implemented by concrete stores.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Task&lt;IdempotentTransaction?&gt; TryGetAsync(string composite, CancellationToken token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>composite</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Composite key to lookup.</p>
+</dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Idempotent.Core.Contracts.IdempotentTransaction.html">IdempotentTransaction</a>&gt;</dt>
+    <dd><p>Transaction when present; otherwise null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_StoreBase_TryHealthCheckAsync_" data-uid="Idempotent.Core.Abstractions.StoreBase.TryHealthCheckAsync*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_StoreBase_TryHealthCheckAsync_System_Threading_CancellationToken_" data-uid="Idempotent.Core.Abstractions.StoreBase.TryHealthCheckAsync(System.Threading.CancellationToken)">
+  TryHealthCheckAsync(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/StoreBase.cs/#L376"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional health check hook that concrete stores may override.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Task TryHealthCheckAsync(CancellationToken token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_StoreBase_TryInitAsync_" data-uid="Idempotent.Core.Abstractions.StoreBase.TryInitAsync*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_StoreBase_TryInitAsync_System_Threading_CancellationToken_" data-uid="Idempotent.Core.Abstractions.StoreBase.TryInitAsync(System.Threading.CancellationToken)">
+  TryInitAsync(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/StoreBase.cs/#L385"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional initialization hook that concrete persistent stores may override.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Task TryInitAsync(CancellationToken token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_StoreBase_TryUpdateAsync_" data-uid="Idempotent.Core.Abstractions.StoreBase.TryUpdateAsync*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_StoreBase_TryUpdateAsync_System_String_Idempotent_Core_Contracts_IdempotentTransaction_System_Threading_CancellationToken_" data-uid="Idempotent.Core.Abstractions.StoreBase.TryUpdateAsync(System.String,Idempotent.Core.Contracts.IdempotentTransaction,System.Threading.CancellationToken)">
+  TryUpdateAsync(string, IdempotentTransaction, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/StoreBase.cs/#L361"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Store-specific update operation. Implemented by concrete stores.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Task&lt;bool&gt; TryUpdateAsync(string composite, IdempotentTransaction transaction, CancellationToken token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>composite</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Composite key to update.</p>
+</dd>
+    <dt><code>transaction</code> <a class="xref" href="Idempotent.Core.Contracts.IdempotentTransaction.html">IdempotentTransaction</a></dt>
+    <dd><p>Transaction to persist.</p>
+</dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>True when the update succeeded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Idempotent_Core_Abstractions_StoreBase_ValidateArgumentLength_" data-uid="Idempotent.Core.Abstractions.StoreBase.ValidateArgumentLength*"></a>
+
+  <h3 id="Idempotent_Core_Abstractions_StoreBase_ValidateArgumentLength_System_String_System_String_" data-uid="Idempotent.Core.Abstractions.StoreBase.ValidateArgumentLength(System.String,System.String)">
+  ValidateArgumentLength(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mansoorafzal/Idempotent.Net-Workspace/blob/v1.0.0/source/Idempotent.Core/Abstractions/StoreBase.cs/#L480"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Validates the length of an argument. Concrete implementations may override to enforce provider limits.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual (bool valid, string errorMessage) ValidateArgumentLength(string argumentName, string argumentValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>argumentName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Argument name being validated.</p>
+</dd>
+    <dt><code>argumentValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Argument value to validate.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.boolean,system.string-.valid">valid</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.boolean,system.string-.errormessage">errorMessage</a>)</dt>
+    <dd><p>Tuple of (valid, errorMessage).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          idempotent-labs © 2026
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
